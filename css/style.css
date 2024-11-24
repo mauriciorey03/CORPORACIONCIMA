@@ -201,8 +201,9 @@ h6,
     height: 75px;
     display: flex;
     align-items: center;
-    background: var(--primary);
+    background: var(--dark);
 }
+
 
 .navbar .navbar-brand::after {
     position: absolute;
