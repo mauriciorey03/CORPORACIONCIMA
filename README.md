@@ -19,13 +19,14 @@
 - [x] Iconos de Icontec
 
 ### Footer y Navegación
-- [ ] Actualizar en footer:
+- [x] Actualizar en footer:
   - [ ] Sedes
-  - [ ] Enlaces rápidos
+  - [-] Enlaces rápidos
+  - Nota: se agregó avisos de privacidad y políticas
 
 ### Contenido Legal
-- [ ] Sección de políticas
-- [ ] Revisar y actualizar contenido de la sección de políticas
+- [x] Sección de políticas
+- [x] Revisar y actualizar contenido de la sección de políticas
 
 ### Ajustar AJAX envío
 - [ ] Poner a funcionar la seción de envío
