@@ -5,10 +5,9 @@
 ### Revisión y Aprobación
 
  - [ ] Obtener visto bueno de textos por parte de Miguel
- - [ ] Visto bueno textos de Miguel
 
 ### UI/UX
-- [ ] Actualizar botón verde de contacto
+- [x] Actualizar botón verde de contacto
 - [ ] Revisar el slider
 
 ### Secciones por Desarrollar
@@ -17,7 +16,7 @@
   - [ ] Incluir todos los clientes
 
 ### Elementos Corporativos
-- [ ] Iconos de Icontec
+- [x] Iconos de Icontec
 
 ### Footer y Navegación
 - [ ] Actualizar en footer:
