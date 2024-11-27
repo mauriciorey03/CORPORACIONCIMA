@@ -8,12 +8,13 @@
 
 ### UI/UX
 - [x] Actualizar botón verde de contacto
-- [ ] Revisar el slider
+- [x] Revisar el slider
+- [] ajustar banner sedes
 
 ### Secciones por Desarrollar
-- [ ] Sección equipos
-- [ ] Sección de testimonios + experiencia
-  - [ ] Incluir todos los clientes
+- [] Sección equipos
+- [x] Sección de testimonios + experiencia
+  - [x] Incluir todos los clientes
 
 ### Elementos Corporativos
 - [x] Iconos de Icontec

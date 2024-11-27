@@ -170,6 +170,7 @@
                                 <span>gerencia@corporacion-cima.com</span>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -179,33 +180,81 @@
                     <form id="contactForm" novalidate="novalidate">
                         <div class="row">
                             <div class="col-sm-6 control-group">
-                                <input type="text" class="form-control py-2" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <input type="text" class="form-control py-2" id="name" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="col-sm-6 control-group">
-                                <input type="email" class="form-control py-2" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                <input type="email" class="form-control py-2" id="email" placeholder="Correo electrónico" required="required" data-validation-required-message="Por favor ingresa tu correo" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="col-sm-6 control-group">
-                                <input type="text" class="form-control py-2" id="mobile" placeholder="Mobile" required="required" data-validation-required-message="Please enter your mobile number" pattern="^(?![-. ])[\d().+\- ]{6,14}\d$" data-validation-pattern-message="Not a valid mobile number" />
+                                <input type="text" class="form-control py-2" id="mobile" placeholder="Teléfono" required="required" data-validation-required-message="Please enter your mobile number" pattern="^(?![-. ])[\d().+\- ]{6,14}\d$" data-validation-pattern-message="Not a valid mobile number" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="col-sm-6 control-group">
-                                <input type="text" class="form-control py-2" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <input type="text" class="form-control py-2" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por favor ingrese el asunto" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="col-12 control-group">
-                                <textarea class="form-control" rows="4" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <textarea class="form-control" rows="4" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Por favor ingrese su mensaje"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            
+                            <!-- Data Protection Section -->
+                            <div class="col-12 control-group mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dataConsent" required="required" data-validation-required-message="Please accept the data protection policy">
+                                    <label class="form-check-label" for="dataConsent">
+                                        He leído y acepto la política de protección de datos
+                                    </label>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="mt-2">
+                                    <small>
+                                        <a class="text-primary" data-bs-toggle="collapse" href="#dataProtectionDetails" role="button" aria-expanded="false" aria-controls="dataProtectionDetails">
+                                            Ver detalles <i class="fas fa-chevron-down ms-1"></i>
+                                        </a>
+                                    </small>
+                                </div>
+                                <div class="collapse mt-2" id="dataProtectionDetails">
+                                    <div class="card card-body bg-light border-0">
+                                        <small class="text-muted">
+                                            De acuerdo con la Ley Estatutaria 1581 de 2012 de Protección de Datos y con el Decreto 1074 de 2015, autorizo como titular de mis datos personales, que éstos sean incorporados en una base de datos responsabilidad de LA CORPORACIÓN PARA LA INVESTIGACIÓN Y DESARROLLO EN CIENCIA DE MATERIALES -CIMA los cuáles serán tratados con las finalidades estipuladas en el manual de políticas y procedimientos al cual podré tener acceso a través del correo electrónico: <a href="mailto:proteccion.datos@corporacioncima.com">proteccion.datos@corporacioncima.com</a> en especial para el registro de mis datos personales en el presente formulario.
+                                            <br><br>
+                                            De igual modo, declaró haber sido informado de que puedo ejercitar los derechos de acceso, corrección, supresión, revocación o reclamo por infracción sobre mis datos, mediante escrito dirigido a LA CORPORACIÓN PARA LA INVESTIGACIÓN Y DESARROLLO EN CIENCIA DE MATERIALES -CIMA a la dirección de correo electrónico antes mencionada, indicando en el asunto el derecho que desea ejercitar.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                    
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-2" type="submit" id="sendMessageButton">
-                                    <span>Send Message</span>
+                                    <span>Enviar mensaje</span>
                                     <div class="d-none spinner-border spinner-border-sm text-light ms-3" role="status"></div>
                                 </button>
                             </div>
                         </div>
                     </form>
+                    
+                    <style>
+                    [data-bs-toggle="collapse"] .fa-chevron-down {
+                        transition: transform 0.3s ease;
+                        font-size: 0.75rem;
+                    }
+                    
+                    [data-bs-toggle="collapse"][aria-expanded="true"] .fa-chevron-down {
+                        transform: rotate(180deg);
+                    }
+                    
+                    .card-body {
+                        font-size: 0.875rem;
+                        text-align: justify;
+                    }
+                    
+                    .form-check-label {
+                        font-size: 0.9rem;
+                    }
+                    </style>
                 </div>
             </div>
         </div>
