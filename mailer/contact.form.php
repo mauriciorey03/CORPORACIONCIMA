@@ -22,10 +22,10 @@ $plainTextBody .= "Subject: $subject\n";
 $plainTextBody .= $message;
 
 // Recipient name. Change this name to your
-$recipientName = "Joe User";
+$recipientName = "CIMA";
 
 // Recipient email. Change this email to your
-$recipientEmail = "joe@example.com";
+$recipientEmail = "carlos.blancoherrera@gmail.com";
 
 // Initiate PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;

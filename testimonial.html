@@ -29,6 +29,101 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .clients-section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      color: #2d3436;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: #636e72;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .client-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .client-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .client-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .client-name {
+      color: #2d3436;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .client-position {
+      color: var(--dark);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .client-quote {
+      color: #636e72;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .client-rating {
+      color: #fdcb6e;
+      font-size: 1.2rem;
+    }
+
+
+    @media (max-width: 768px) {
+      .clients-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+    </style>
 </head>
 
 <body>
@@ -88,56 +183,169 @@
         </div>
         <!-- Page Header End -->
 
+        <!-- testimonial 1 START -->
+        <section class="container-xxl py-5">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Experiencia</p>
+                <h1 class="display-5 mb-5">Nuestros Clientes Satisfechos</h1>
+            </div>
+            <div class="clients-grid fadeInUp wow" data-wow-delay="0.1s" >
+              <!-- Cliente 1 -->
+              <div class="client-card">
+                <img src="/img/ecopetrol-logo.png" alt="Cliente 1" class="client-image">
+                <h3 class="client-name">ECOPETROL</h3>
+                <p class="client-quote">Compañía petrolera estatal colombiana, la más grande del país en producción de hidrocarburos.</p>
+              </div>
+              <div class="client-card">
+                <img src="/img/logo-promigas-web.png" alt="Cliente promigas" class="client-image border" >
+                <h3 class="client-name">PROMIGAS</h3>
+                <p class="client-quote">Distribuye y comercializa gas natural y soluciones energéticas competitivas, consolidándose como una de las principales empresas de la región</p>
+          
+              </div>
+        
+              <!-- Cliente 2 -->
+              <div class="client-card">
+                <img src="/img/HALLIBLOGO.png" alt="Cliente 2" class="client-image">
+                <h3 class="client-name">HALLIBURTON</h3>
+                <p class="client-quote">Empresa estadounidense de servicios petroleros que provee tecnología y servicios para la industria energética.</p>
+          
+              </div>
+        
+              <!-- Cliente 3 -->
+              <div class="client-card">
+                <img src="/img/oxy.png" alt="Cliente 3" class="client-image">
+                <h3 class="client-name">OXY</h3>
+                <p class="client-quote">Empresa estadounidense dedicada a la exploración, producción de petróleo y gas, como a la fabricante de químicos.</p>
+              </div>
+              <div class="client-card">
+                <img src="/img/confipetrol_oficial_logo.jpg" alt="Cliente confi" class="client-image">
+                <h3 class="client-name">CONFIPETROL</h3>
+                <p class="client-quote">Confipetrol realiza vigilancia tecnológica para identificar innovaciones en mantenimiento de equipos predictivo en el sector petroleros.</p>
+              </div>
+              <div class="client-card">
+                <img src="/img/tgilogo2.png" alt="Cliente tgi" class="client-image ">
+                <h3 class="client-name">TGI Grupo Energía Bogotá</h3>
+                <p class="client-quote"> Empresa especializada en transporte de gas natural: diseño, construcción, mantenimiento y operación de gasoductos.  
+                </p>
+              </div>
+              <div class="client-card">
+                <img src="/img/gecelca-logo.png" alt="Cliente gcel" class="client-image ">
+                <h3 class="client-name">GECELCA</h3>
+                <p class="client-quote"> Empresa generadora y comercializadora de energía eléctrica y gas natural, que respalda el sistema energético colombiano.  
+                </p>
+              </div>
+        
+              <!-- Cliente 4 -->
+              <div class="client-card">
+                <img src="/img/exon.png" alt="Cliente 4" class="client-image">
+                <h3 class="client-name">EXXON MOBIL</h3>
+                <p class="client-quote">Proveedor líder de tecnologías de refinación de combustible</p>
+              </div>
+              <div class="client-card">
+                <img src="/img/weather.jpg" alt="Cliente 5" class="client-image">
+                <h3 class="client-name">WEATHERFORD</h3>
+                <p class="client-quote">Empresa multinacional de Estados Unidos que ofrece servicios y equipos para la producción, perforación, evaluación, terminación e intervención de pozos de petróleo y gas natural. 
+                </p>
+              </div>
+              <div class="client-card">
+                <img src="/img/Logo-conequipos-300x300.png" alt="Cliente conequipos" class="client-image border">
+                <h3 class="client-name">CONEQUIPOS</h3>
+                <p class="client-quote">Compañía privada establecida en Colombia con liderazgo en el diseño, construcción y montaje de obras de infraestructura para el desarrollo del país. 
+                </p>
+              </div>
+              <div class="client-card">
+                <img src="/img/masa.jpeg" alt="Cliente masa" class="client-image ">
+                <h3 class="client-name">MASA Mecanicos Asociados</h3>
+                <p class="client-quote">servicios de soporte para la industria del petróleo con más de 40 años de experiencia en Colombia y Perú. 
+                </p>
+              </div>
+              <div class="client-card">
+                <img src="/img/arcomat_logo.jpg" alt="Cliente arcomat" class="client-image border">
+                <h3 class="client-name">ARCOMAT</h3>
+                <p class="client-quote">Empresa especializada en consultoría, construcción, mantenimiento, rehabilitación, inspección e interventoría de obras de infraestructura para el almacenamiento y transporte de hidrocarburos. 
+                </p>
+              </div>
+              
+            </div>
+          </section>
+         <!-- testimonial 1 end -->
     <!-- Testimonial Start -->
-    <!-- <div class="container-xxl py-5">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Testimonial</p>
-                <h1 class="display-5 mb-5">What Our Clients Say!</h1>
+                <p class="fw-medium text-uppercase text-primary mb-2">OVERVIEW</p>
+                <h1 class="display-5 mb-5">Algunos de Servicios que Hemos Aplicado</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
                     <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/ecopetrol-logo.png">
                         <div class="btn-square bg-primary rounded-circle">
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                     </div>
                     <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+                        <p>Desarrollo de sistemas de gestión de integridad de activos para las refinerías a nivel nacional.</p>
+                        <h5 class="mb-1">ECOPETROL</h5>
+                        <span class="fst-italic">Cliente Principal</span>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/tgilogo2.png">
                         <div class="btn-square bg-primary rounded-circle">
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                     </div>
                     <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+                        <p>Gestión de programas de integridad en campos petroleros mayores SOM, Castilla y Chichimene.</p>
+                        <h5 class="mb-1">TGI S.A. ESP</h5>
+                        <span class="fst-italic">Cliente Destacado</span>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/gecelca-logo.png">
                         <div class="btn-square bg-primary rounded-circle">
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                     </div>
                     <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+                        <p>Inspección NDT de calderas industriales y recipientes a presión en plantas de proceso.</p>
+                        <h5 class="mb-1">GECELCA</h5>
+                        <span class="fst-italic">Clientes Industriales</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/dow.jpg">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Inspección NDT de calderas industriales y recipientes a presión en plantas de proceso.</p>
+                        <h5 class="mb-1">DOW QUIMICA</h5>
+                        <span class="fst-italic">Clientes Industriales</span>
+                    </div>
+                </div>
+        
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/logo-promigas-web.png">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Evaluación de anomalías ASME B31G con HandyScan 3D</p>
+                        <h5 class="mb-1">PROMIGAS</h5>
+                        <span class="fst-italic">Clientes Industriales</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Testimonial End -->
         
 
