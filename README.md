@@ -12,7 +12,7 @@
 - [] ajustar banner sedes
 
 ### Secciones por Desarrollar
-- [] Sección equipos
+- [x] Sección equipos
 - [x] Sección de testimonios + experiencia
   - [x] Incluir todos los clientes
 
@@ -21,8 +21,8 @@
 
 ### Footer y Navegación
 - [x] Actualizar en footer:
-  - [ ] Sedes
-  - [-] Enlaces rápidos
+  - [x] Sedes
+  - [x] Enlaces rápidos
   - Nota: se agregó avisos de privacidad y políticas
 
 ### Contenido Legal
@@ -38,4 +38,4 @@
 - Mantener consistencia en diseño corporativo
 
 ---
-Última actualización: Noviembre 2023
+Última actualización: Diciembre 2024
