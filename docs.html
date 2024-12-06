@@ -14,6 +14,21 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/prism.min.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function forceReloadCSS() {
+                var link = document.querySelector('link[href="css/style.css"]');
+                if (link) {
+                    link.remove();
+                    var newLink = document.createElement('link');
+                    newLink.rel = 'stylesheet';
+                    newLink.href = 'css/style.css?v=' + Date.now();
+                    document.head.appendChild(newLink);
+                }
+            }
+            forceReloadCSS();
+        });
+    </script>
 </head>
 
 <body id="top" data-spy="scroll" data-offset="51">

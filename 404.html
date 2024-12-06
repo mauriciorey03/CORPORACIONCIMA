@@ -32,6 +32,21 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function forceReloadCSS() {
+                var link = document.querySelector('link[href="css/style.css"]');
+                if (link) {
+                    link.remove();
+                    var newLink = document.createElement('link');
+                    newLink.rel = 'stylesheet';
+                    newLink.href = 'css/style.css?v=' + Date.now();
+                    document.head.appendChild(newLink);
+                }
+            }
+            forceReloadCSS();
+        });
+    </script>
 </head>
 
 <body>

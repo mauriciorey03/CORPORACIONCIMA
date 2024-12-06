@@ -12,7 +12,21 @@
     <meta http-equiv="Expires" content="0">
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon">
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function forceReloadCSS() {
+                var link = document.querySelector('link[href="css/style.css"]');
+                if (link) {
+                    link.remove();
+                    var newLink = document.createElement('link');
+                    newLink.rel = 'stylesheet';
+                    newLink.href = 'css/style.css?v=' + Date.now();
+                    document.head.appendChild(newLink);
+                }
+            }
+            forceReloadCSS();
+        });
+    </script>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
