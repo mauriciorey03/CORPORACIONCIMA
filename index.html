@@ -58,6 +58,134 @@
     <!-- Spinner End -->
 
 
+
+<style>
+    .construction-banner {
+      position: fixed;
+      top: 100px;
+      right: 20px; /* Cambiado de left a right */
+      background-color: rgba(255, 255, 255, 0.98);
+      border-right: 4px solid #b7d334; /* Cambiado de border-left a border-right */
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+      width: 320px;
+      padding: 15px 20px;
+      animation: slideInRight 0.5s ease-out; /* Nueva animación desde la derecha */
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .construction-banner.sliding-out {
+      animation: slideOutRight 0.5s ease-in forwards; /* Nueva animación hacia la derecha */
+    }
+
+    @keyframes slideOutRight {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+
+    .construction-icon {
+      color: #b7d334;
+      margin-bottom: 10px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .construction-title {
+      font-size: 16px;
+      color: #333;
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 600;
+    }
+
+    .construction-text {
+      font-size: 14px;
+      color: #666;
+      margin: 8px 0;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.4;
+    }
+
+    .contact-info {
+      font-size: 12px;
+      color: #888;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .close-banner {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s;
+      padding: 5px;
+    }
+
+    .close-banner:hover {
+      color: #333;
+    }
+
+    @media (max-width: 576px) {
+      .construction-banner {
+        width: calc(100% - 40px);
+        top: 10px;
+        right: 10px; /* Ajustado a right */
+      }
+    }
+  </style>
+
+  <script>
+    // Función que crea y muestra el banner
+    function showConstructionBanner() {
+      const banner = document.createElement('div');
+      banner.className = 'construction-banner';
+      banner.innerHTML = `
+        <i class="fas fa-times close-banner"></i>
+        <div class="construction-icon">
+          <i class="fas fa-tools"></i>
+          <span class="construction-title">Sitio en Construcción</span>
+        </div>
+        <p class="construction-text">Estamos trabajando para actualizar nuestro sitio web. Algunas funcionalidades podrían no estar disponibles.</p>
+        <p class="contact-info">Consultas: (+57) 607 670 4695 | contacto@corporacioncima.com</p>
+      `;
+
+      document.body.appendChild(banner);
+
+      banner.querySelector('.close-banner').addEventListener('click', () => {
+        banner.classList.add('sliding-out');
+        setTimeout(() => {
+          banner.remove();
+        }, 500);
+      });
+    }
+
+    // Mostrar el banner cuando la página se carga
+    document.addEventListener('DOMContentLoaded', showConstructionBanner);
+  </script>
+
+
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5 ">
         <a href="index.html" class="navbar-brand ps-5 me-0">
