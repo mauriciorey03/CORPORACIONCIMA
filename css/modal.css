@@ -1,94 +1,88 @@
-.construction-banner {
+.construction-modal {
   position: fixed;
-  top: 100px;
-  right: 20px; /* Cambiado de left a right */
-  background-color: rgba(255, 255, 255, 0.98);
-  border-right: 4px solid #b7d334; /* Cambiado de border-left a border-right */
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-  width: 420px;
-  padding: 15px 20px;
-  animation: slideInRight 0.5s ease-out; /* Nueva animación desde la derecha */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1060;
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  text-align: center;
 }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.construction-banner.sliding-out {
-  animation: slideOutRight 0.5s ease-in forwards; /* Nueva animación hacia la derecha */
-}
-
-@keyframes slideOutRight {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
+.construction-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  backdrop-filter: blur(3px);
 }
 
 .construction-icon {
   color: #b7d334;
-  margin-bottom: 10px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .construction-title {
-  font-size: 16px;
+  font-size: 24px;
   color: #333;
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
 }
 
 .construction-text {
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
-  margin: 8px 0;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.4;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
 }
 
 .contact-info {
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.close-banner {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+.construction-button {
+  background-color: #b7d334;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.construction-button:hover {
+  background-color: #9ab82b;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
   cursor: pointer;
   color: #666;
   transition: color 0.3s;
   padding: 5px;
 }
 
-.close-banner:hover {
+.close-modal:hover {
   color: #333;
 }
 
-@media (max-width: 576px) {
-  .construction-banner {
-    width: calc(100% - 40px);
-    top: 10px;
-    right: 10px; /* Ajustado a right */
-  }
+.hidden {
+  display: none !important;
 }
