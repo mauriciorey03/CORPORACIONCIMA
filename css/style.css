@@ -188,6 +188,40 @@ h6,
     background-color: var(--primary);
 }
 
+.politics-icon {
+  padding: 30px;
+}
+
+@media (max-width: 425px) { /* Mobile L */
+    .politics-icon {
+        position: absolute;
+        top: 4rem;
+        left: 1rem;
+        transform: translate(-50%, 0);
+    }
+    body{
+        overflow-x: hidden;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    
+    .politics-icon i {
+        font-size: 1.5em !important;
+    }
+}
+
+@media (max-width: 375px) { /* Mobile M */
+    .politics-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .politics-icon i {
+        font-size: 1.25em !important;
+    }
+}
+
 
 /*** Navbar ***/
 .navbar.sticky-top {
