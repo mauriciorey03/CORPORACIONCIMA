@@ -4,7 +4,8 @@
 
 ### Actualizar sección servicios
 - [x] Actualizada
-- [] Actualizar enlaces
+- [ ] Actualizar enlaces
+- [ ] Actualizar títulos tag y header
 
 
 ### Validación contact form envío
