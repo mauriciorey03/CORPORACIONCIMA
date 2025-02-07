@@ -2,34 +2,12 @@
 
 ## Tareas Pendientes
 
-### Revisión y Aprobación
+### Actualizar sección servicios
+- [x] Actualizada
+- [] Actualizar enlaces
 
- - [ ] Obtener visto bueno de textos por parte de Miguel
 
-### UI/UX
-- [x] Actualizar botón verde de contacto
-- [x] Revisar el slider
-- [] ajustar banner sedes
-
-### Secciones por Desarrollar
-- [x] Sección equipos
-- [x] Sección de testimonios + experiencia
-  - [x] Incluir todos los clientes
-
-### Elementos Corporativos
-- [x] Iconos de Icontec
-
-### Footer y Navegación
-- [x] Actualizar en footer:
-  - [x] Sedes
-  - [x] Enlaces rápidos
-  - Nota: se agregó avisos de privacidad y políticas
-
-### Contenido Legal
-- [x] Sección de políticas
-- [x] Revisar y actualizar contenido de la sección de políticas
-
-### Ajustar AJAX envío
+### Validación contact form envío
 - [ ] Poner a funcionar la seción de envío
 
 ## Notas
@@ -38,4 +16,4 @@
 - Mantener consistencia en diseño corporativo
 
 ---
-Última actualización: Diciembre 2024
+Última actualización: Febrero 2025
