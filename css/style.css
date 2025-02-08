@@ -250,6 +250,16 @@ h6,
     transform: skewX(-30deg);
     background-color: var(--primary);
 }
+.navbar .navbar-brand::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: -65px; /* Ajusta esta distancia para separar las franjas */
+    transform: skewX(-30deg);
+    background-color:  #ea5125;
+}
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;

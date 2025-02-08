@@ -27,6 +27,29 @@
             forceReloadCSS();
         });
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "rLh0zglEzIBTTUgQX",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +94,7 @@
         <div class="wow fadeInUp" data-wow-delay="0.3s">
             <!-- Logo -->
             <div class="position-relative h-10">
+                
             </div>
         </div>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -194,7 +218,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="contact-form">
                     <div id="alertMessage"></div>
-                    <form id="contactForm" novalidate="novalidate">
+                    <form id="contact-form" novalidate="novalidate">
                         <div class="row">
                             <div class="col-sm-6 control-group">
                                 <input type="text" class="form-control py-2" id="name" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name" />
@@ -245,7 +269,7 @@
                             </div>
                     
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-2" type="submit" id="sendMessageButton">
+                                <button class="btn btn-primary w-100 py-2" type="submit" id="sendMessageButton" value="Send">
                                     <span>Enviar mensaje</span>
                                     <div class="d-none spinner-border spinner-border-sm text-light ms-3" role="status"></div>
                                 </button>
