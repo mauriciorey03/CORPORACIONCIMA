@@ -27,29 +27,15 @@
             forceReloadCSS();
         });
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+		</script>
     <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "rLh0zglEzIBTTUgQX",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+		(function(){
+			emailjs.init("rLh0zglEzIBTTUgQX"); 
+            // no se si este es el public key 
+
+		})();
+		</script>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -218,7 +204,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="contact-form">
                     <div id="alertMessage"></div>
-                    <form id="contact-form" novalidate="novalidate">
+                    <form id="contenedor-contacto" novalidate="novalidate" class="contenedor-contacto">
                         <div class="row">
                             <div class="col-sm-6 control-group">
                                 <input type="text" class="form-control py-2" id="name" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name" />
@@ -244,7 +230,7 @@
                             <!-- Data Protection Section -->
                             <div class="col-12 control-group mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="dataConsent" required="required" data-validation-required-message="Please accept the data protection policy">
+                                    <input class="form-check-input" type="checkbox" id="dataconsent" required="required" data-validation-required-message="Please accept the data protection policy">
                                     <label class="form-check-label" for="dataConsent">
                                         He leído y acepto la política de protección de datos
                                     </label>
@@ -475,6 +461,58 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        const form = document.querySelector('.contenedor-contacto');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('mobile').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const dataconsent = document.getElementById('dataconsent').value;
+    
+            // Realizar validaciones aquí
+            if (name === '') {
+                alert('Por favor ingresa tu nombre');
+                return;
+            }
+            if (email === '') {
+                alert('Por favor ingresa tu correo electrónico');
+                return;
+            }
+            if (telefono === 'Empty') {
+                alert('Por favor selecciona un departamento');
+                return;
+            }
+            if (subject === '') {
+                alert('Por favor ingresa tu número de contacto');
+                return;
+            }
+            if (message === '') {
+                alert('Por favor ingresa tu número de contacto');
+                return;
+            }
+            if (dataconsent === '') {
+                alert('Por favor ingresa tu número de contacto');
+                return;
+            }
+    
+            // Si todas las validaciones pasan, puedes enviar el formulario o realizar otras acciones
+           // Retrieve the selected value
+            // form.submit();
+            let parms={
+                name:name,
+                email:email,
+                mobile:telefono,
+                subject:subject,
+                message:message,
+              
+            }
+            
+            emailjs.send('service_86tlov9','template_mb1jcvn',parms).then(alert("se ha enviado el correo"))
+        });
+    </script>
 </body>
 
 </html>
