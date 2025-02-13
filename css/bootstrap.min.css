@@ -192,6 +192,7 @@
     scroll-behavior: smooth;
   }
 }
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -3875,6 +3876,11 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+}
+@media (max-width: 375px) {
+  .navbar-brand {   /* Reducir el margen del brand */
+    margin-right: 5rem;       /* Reducir el padding general */
+  }
 }
 .navbar > .container,
 .navbar > .container-fluid,

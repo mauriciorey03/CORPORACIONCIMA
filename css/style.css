@@ -259,6 +259,7 @@ h6,
     right: -65px; /* Ajusta esta distancia para separar las franjas */
     transform: skewX(-30deg);
     background-color:  #ea5125;
+    z-index: -1;
 }
 
 .navbar .navbar-nav .nav-link {
