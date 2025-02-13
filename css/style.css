@@ -270,6 +270,28 @@ h6,
     font-weight: 500;
     outline: none;
 }
+.navpadding{
+    padding-right: 3rem;
+}
+@media (max-width: 425px) {
+    .navpadding {
+        padding-right: 1rem;
+    }
+}
+@media (max-width: 375px) {
+    .navpadding {
+        padding-right: 0.3rem;
+    }
+}
+@media (max-width: 320px) {
+    .navbar-toggler {
+        background: rgba(255, 255, 255, 0.2);  /* fondo semi-transparente */
+        backdrop-filter: blur(8px) brightness(1.1);  /* blur y brillo */
+        /* borde sutil */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    }
+}
+
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
